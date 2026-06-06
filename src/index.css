@@ -1,0 +1,156 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #1a73e8;
+  --primary-dark: #1557b0;
+  --primary-light: #e8f0fe;
+  --primary-gradient: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+  --on-primary: #ffffff;
+  --on-surface: #1a1b1e;
+  --on-surface-variant: #5f6368;
+  --surface: #ffffff;
+  --surface-alt: #f8f9fa;
+  --surface-container: #f1f3f4;
+  --outline: #dadce0;
+  --neutral: #5f6368;
+  --footer-bg: #1a1b1e;
+  --footer-text: #9aa0a6;
+  --shadow-sm: 0 1px 2px rgba(60, 64, 67, 0.08);
+  --shadow-md: 0 2px 8px rgba(60, 64, 67, 0.12);
+  --shadow-lg: 0 8px 30px rgba(60, 64, 67, 0.15);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  --header-bg: rgba(255, 255, 255, 0.95);
+  --card-bg: rgba(255, 255, 255, 0.95);
+
+  --font-headline: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--on-surface);
+  background: var(--surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background 0.2s, color 0.2s;
+}
+
+[data-theme="dark"] {
+  --primary: #8ab4f8;
+  --primary-dark: #669df6;
+  --primary-light: #1e3a5f;
+  --primary-gradient: linear-gradient(135deg, #8ab4f8 0%, #4a8bd6 100%);
+  --on-primary: #1a1b1e;
+  --on-surface: #e8eaed;
+  --on-surface-variant: #9aa0a6;
+  --surface: #1e1e1e;
+  --surface-alt: #252525;
+  --surface-container: #2d2d2d;
+  --outline: #3c4043;
+  --neutral: #9aa0a6;
+  --footer-bg: #0d0d0d;
+  --footer-text: #5f6368;
+  --header-bg: rgba(30, 30, 30, 0.95);
+  --card-bg: rgba(40, 40, 40, 0.95);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ── Spinner ── */
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid var(--outline);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Responsive Design ── */
+@media (max-width: 1024px) {
+  .hero-layout { flex-direction: column; gap: 40px; }
+  .hero { padding: 120px 24px 60px; }
+  .hero-image { max-width: 500px; }
+  .features-grid { grid-template-columns: repeat(2, 1fr); }
+  .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .nav, .header-actions { display: none; }
+  .hamburger { display: flex; }
+  .mobile-menu { display: flex; }
+  .hero-stats { flex-wrap: wrap; gap: 16px; }
+  .stat { min-width: calc(50% - 8px); }
+  .features-grid { grid-template-columns: 1fr; }
+  .solutions-grid { grid-template-columns: 1fr; }
+  .pricing-grid { grid-template-columns: 1fr; }
+  .footer-inner { flex-direction: column; gap: 32px; }
+  .footer-links { grid-template-columns: repeat(2, 1fr); }
+  .section-header h2 { font-size: 28px; }
+  .hero-content h1 { font-size: 32px; }
+  .header-inner { padding: 0 16px; }
+  .dash-body { flex-direction: column; }
+  .dash-sidebar { width: 100%; border-right: none; border-bottom: 1px solid var(--outline); padding: 12px 16px; overflow-x: auto; }
+  .dash-sidebar nav { flex-direction: row; gap: 12px; }
+  .sidebar-link { white-space: nowrap; font-size: 13px; padding: 6px 12px; }
+  .sidebar-link svg { display: none; }
+  .dash-main { padding: 24px 16px; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .admin-table-wrap { overflow-x: auto; }
+  .agent-layout { flex-direction: column; }
+  .agent-action-panel { border-left: none; border-top: 1px solid var(--outline); }
+}
+
+@media (max-width: 480px) {
+  .stats-grid { grid-template-columns: 1fr; }
+  .hero-buttons { flex-direction: column; }
+  .hero-buttons .btn { width: 100%; }
+  .cta-card { padding: 40px 24px; }
+  .cta-buttons { flex-direction: column; }
+  .cta-buttons .btn { width: 100%; }
+  .dash-header-inner { padding: 0 16px; }
+  .footer-links { grid-template-columns: 1fr; }
+}
