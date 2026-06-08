@@ -73,11 +73,11 @@ export default function ContentGenerator() {
             </a>
             <a href="/ai/agent" className="sidebar-link">
               <svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor"><circle cx="10" cy="10" r="10"/><path d="M6 10h8M10 6v8"/></svg>
-              AI Agent
+              Nova
             </a>
             <a href="/ai/generate" className="sidebar-link active">
               <svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor"><path d="M10 2l4 4-4 4-4-4zM2 10l4-4 4 4-4 4zM18 10l-4-4-4 4 4 4zM10 18l-4-4 4-4 4 4z"/></svg>
-              AI Generate
+              Nova Generate
             </a>
             <a href="/admin/users" className="sidebar-link">
               <svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor"><path d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm0 2h12v2H4V6zm0 4h12v4H4v-4z"/></svg>
@@ -91,7 +91,7 @@ export default function ContentGenerator() {
         </aside>
 
         <main className="dash-main">
-          <h1>AI Content Generator</h1>
+          <h1>Nova Generator</h1>
           <p className="dash-subtitle">Generate reports, insights, and descriptions with artificial intelligence.</p>
 
           <div className="generator-layout">

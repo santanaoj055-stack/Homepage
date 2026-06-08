@@ -4,7 +4,7 @@ import API_URL from '../api'
 export default function ChatBot() {
   const [open, setOpen] = useState(false)
   const [messages, setMessages] = useState([
-    { role: 'assistant', text: '¡Hola! Soy el asistente de Homepage. ¿En qué puedo ayudarte?' },
+    { role: 'assistant', text: '¡Hola! Soy Nova, el asistente de Homepage. ¿En qué puedo ayudarte?' },
   ])
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
@@ -57,7 +57,7 @@ export default function ChatBot() {
                 <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
               </div>
               <div>
-                <span className="chatbot-title">Asistente IA</span>
+                <span className="chatbot-title">Nova</span>
                 <span className="chatbot-status">Online</span>
               </div>
             </div>

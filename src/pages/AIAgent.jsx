@@ -9,7 +9,7 @@ export default function AIAgent() {
   const user = JSON.parse(localStorage.getItem('user') || 'null')
   const token = localStorage.getItem('token')
   const [messages, setMessages] = useState([
-    { role: 'assistant', text: '👋 Soy el agente IA de Homepage. Puedo ayudarte a:\n\n👤 Usuarios\n- Crear usuarios\n\n📨 Mensajes\n- Enviar mensajes de contacto\n- Enviarme notificaciones\n\n📊 Datos\n- Ver estadísticas del dashboard\n- Generar reportes\n\n⚙️ Mi cuenta\n- Actualizar mi perfil\n- Cambiar mi contraseña\n\n💬 Preguntas\n- Responder preguntas generales\n\n¿Qué deseas hacer?' },
+    { role: 'assistant', text: '👋 Soy Nova, el agente de Homepage. Puedo ayudarte a:\n\n👤 Usuarios\n- Crear usuarios\n\n📨 Mensajes\n- Enviar mensajes de contacto\n- Enviarme notificaciones\n\n📊 Datos\n- Ver estadísticas del dashboard\n- Generar reportes\n\n⚙️ Mi cuenta\n- Actualizar mi perfil\n- Cambiar mi contraseña\n\n💬 Preguntas\n- Responder preguntas generales\n\n¿Qué deseas hacer?' },
   ])
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
@@ -165,11 +165,11 @@ export default function AIAgent() {
             </a>
             <a href="/ai/agent" className="sidebar-link active">
               <svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor"><circle cx="10" cy="10" r="10"/><path d="M6 10h8M10 6v8"/></svg>
-              AI Agent
+              Nova
             </a>
             <a href="/ai/generate" className="sidebar-link">
               <svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor"><path d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm0 2h12v2H4V6zm0 4h12v4H4v-4z"/></svg>
-              AI Generator
+              Nova Generator
             </a>
             <a href="/admin/users" className="sidebar-link">
               <svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor"><path d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm0 2h12v2H4V6zm0 4h12v4H4v-4z"/></svg>
@@ -183,8 +183,8 @@ export default function AIAgent() {
         </aside>
 
         <main className="dash-main agent-main">
-          <h1>AI Agent</h1>
-          <p className="dash-subtitle">Agente conversacional inteligente. Puede ejecutar acciones en tu nombre.</p>
+          <h1>Nova</h1>
+          <p className="dash-subtitle">Nova, el agente conversacional inteligente. Puede ejecutar acciones en tu nombre.</p>
 
           <div className="agent-layout">
             <div className="agent-chat">

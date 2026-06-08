@@ -1,6 +1,6 @@
 # Homepage - Enterprise Platform
 
-Full-stack enterprise platform built with React + Vite (frontend) and NestJS + TypeORM + PostgreSQL (backend). Includes JWT auth, AI integration (Google Gemini), user/contact CRUD, dashboards, notifications, dark/light theme, CSV export, password recovery, AI-powered agent/generator tools, and production-ready infrastructure.
+Full-stack enterprise platform built with React + Vite (frontend) and NestJS + TypeORM + PostgreSQL (backend). Includes JWT auth, AI integration (Google Gemini), user/contact CRUD, dashboards, notifications, dark/light theme, CSV export, password recovery, Nova agent and generator tools, and production-ready infrastructure.
 
 ---
 
@@ -86,7 +86,7 @@ docker compose up --build
 - **Active nav tracking** — IntersectionObserver highlights current section in nav
 - **Animated nav underlines** — Slide-in hover effect on desktop and mobile links
 - **Responsive design** — Mobile/tablet/desktop optimized
-- **Floating chatbot** — AI-powered support widget (Gemini with demo fallback)
+- **Floating chatbot** — Nova, the AI-powered support widget (Gemini with demo fallback)
 
 ### Auth System
 - Register with name, email, password
@@ -99,13 +99,13 @@ docker compose up --build
 - Real stats: total users, new users today, uptime, active projects, contacts
 - AI-powered insights (Gemini or demo fallback)
 - Activity table with recent contacts and notifications
-- Sidebar navigation: Overview, Profile, AI Agent, AI Generator, Users, Contact
+- Sidebar navigation: Overview, Profile, Nova, Nova Generator, Users, Contact
 
 ### User Management (`/admin/users`)
 - Table with inline edit (name, email, role, active status)
 - Delete with confirmation
 - CSV export
-- Admin-only create via AI Agent
+- Admin-only create via Nova
 
 ### Contact (`/contact`)
 - Public form (name, email, message)
@@ -119,8 +119,8 @@ docker compose up --build
 - Sidebar navigation to all tools
 - Card hover effects with elevated shadow
 
-### AI Agent (`/ai/agent`)
-- Conversational agent that supports 8 actions:
+### Nova (`/ai/agent`)
+- Nova, the conversational agent that supports 8 actions:
   - Create user (admin only)
   - Send contact message
   - Get dashboard stats
@@ -131,11 +131,11 @@ docker compose up --build
   - General Q&A
 - Dynamic forms for each action type
 
-### AI Content Generator (`/ai/generate`)
+### Nova Generator (`/ai/generate`)
 - Generate reports, insights, and descriptions
 - Type selector + prompt input
 
-### AI ChatBot (`ChatBot` component)
+### Nova ChatBot (`ChatBot` component)
 - Floating chat widget on landing page
 - Powered by Gemini (falls back to demo responses on 429)
 
@@ -143,7 +143,7 @@ docker compose up --build
 - Created on: register, password change
 - Bell icon with unread count badge
 - Dropdown panel with mark-read / dismiss
-- AI Agent can create notifications
+- Nova can create notifications
 
 ### Theme System
 - **Dark/light mode** — Persisted in localStorage via `data-theme` attribute
@@ -210,7 +210,7 @@ docker compose up --build
 homepage/
 ├── src/                    # Frontend (React)
 │   ├── components/         # Reusable components
-│   │   ├── ChatBot.jsx     # Floating AI chatbot
+│   │   ├── ChatBot.jsx     # Floating Nova chatbot
 │   │   ├── ErrorBoundary.jsx
 │   │   ├── LoadingScreen.jsx
 │   │   ├── NotificationBell.jsx
@@ -229,7 +229,7 @@ homepage/
 │   │   ├── AdminUsers.jsx
 │   │   ├── ContactPage.jsx
 │   │   ├── Profile.jsx
-│   │   ├── AIAgent.jsx
+│   │   ├── AIAgent.jsx     # Nova agent page
 │   │   ├── ContentGenerator.jsx
 │   │   └── NotFound.jsx
 │   ├── test/               # Vitest tests
@@ -240,7 +240,7 @@ homepage/
 │   └── main.jsx            # Entry point
 ├── backend/
 │   └── src/
-│       ├── ai/             # Gemini AI module (chat, generate, agent, insights)
+│       ├── ai/             # Nova AI module (chat, generate, agent, insights)
 │       ├── auth/           # JWT auth + guards (JwtAuthGuard, AdminGuard)
 │       ├── config/         # Database + data-source config
 │       ├── contact/        # Contact form module
@@ -279,9 +279,9 @@ homepage/
 
 ---
 
-## AI Demo Mode
+## Nova Demo Mode
 
-When the Gemini API key is missing or returns a 429 (free-tier quota exceeded), all AI features gracefully fall back to demo responses with realistic content. No quota error messages are shown to the user. The demo mode supports chat conversations, content generation, agent actions (create user, contact, stats, notifications, reports), and business insights.
+When the Gemini API key is missing or returns a 429 (free-tier quota exceeded), Nova gracefully falls back to demo responses with realistic content. No quota error messages are shown to the user. The demo mode supports chat conversations, content generation, agent actions (create user, contact, stats, notifications, reports), and business insights.
 
 ---
 

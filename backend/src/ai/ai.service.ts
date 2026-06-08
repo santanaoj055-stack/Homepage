@@ -28,7 +28,7 @@ export class AiService implements OnModuleInit {
         systemInstruction: {
           role: 'system',
           parts: [{
-            text: `Eres un asistente de soporte para "Homepage", una plataforma enterprise.
+            text: `Eres Nova, un asistente de soporte para "Homepage", una plataforma enterprise.
 Homepage ofrece: Cloud Infrastructure, Data Analytics, Enterprise Security, Team Collaboration.
 Planes: Starter ($49/mes, 5 users), Professional ($149/mes, 25 users), Enterprise (custom).
 Sé útil, profesional y responde en español.`,
@@ -70,7 +70,7 @@ Sé útil, profesional y responde en español.`,
 
     const prompt = `Contexto del usuario: ${JSON.stringify(userContext)}
 
-Tú eres un agente IA que puede realizar acciones en nombre del usuario.
+Tú eres Nova, un agente que puede realizar acciones en nombre del usuario.
 Basado en el mensaje del usuario, decide si necesitas ejecutar una acción.
 Respondes en español.
 
@@ -120,13 +120,13 @@ Estadísticas: ${JSON.stringify(stats)}`;
       return 'Tenemos 3 planes:\n- Starter: $49/mes (5 usuarios, 10GB)\n- Professional: $149/mes (25 usuarios, 100GB)\n- Enterprise: Precio personalizado (usuarios y almacenamiento ilimitados)\n\n¿Te gustaría más detalles de algún plan?';
     }
     if (q.includes('hola') || q.includes('buenos días') || q.includes('buenas')) {
-      return '¡Hola! 👋 Soy el asistente virtual de Homepage. Puedo ayudarte con:\n- Información sobre planes y precios\n- Características de la plataforma\n- Cómo funciona Homepage\n- Soporte técnico general\n\n¿En qué puedo ayudarte hoy?';
+      return '¡Hola! 👋 Soy Nova, el asistente virtual de Homepage. Puedo ayudarte con:\n- Información sobre planes y precios\n- Características de la plataforma\n- Cómo funciona Homepage\n- Soporte técnico general\n\n¿En qué puedo ayudarte hoy?';
     }
     if (q.includes('seguridad') || q.includes('security') || q.includes('protecci')) {
       return 'Homepage cuenta con:\n- Certificación SOC 2 Tipo II\n- Cumplimiento GDPR\n- Cifrado de extremo a extremo (AES-256)\n- Autenticación SSO\n- Detección avanzada de amenazas\n- 99.99% uptime con failover automático\n\nLa seguridad es nuestra prioridad número uno.';
     }
     if (q.includes('qué puedo hacer') || q.includes('que puedo hacer') || q.includes('funciona') || q.includes('caracter') || q.includes('features') || q.includes('para qué')) {
-      return 'Homepage es una plataforma empresarial todo-en-uno. Puedes:\n\n📊 Dashboard - Ver estadísticas en tiempo real y análisis con IA\n🤖 AI Agent - Asistente conversacional que crea usuarios, envía mensajes, genera reportes y más\n📝 AI Generator - Genera reportes, insights y descripciones automáticamente\n👥 Users - Gestionar usuarios con roles y permisos\n📬 Contact - Formulario de contacto y gestión de mensajes\n🔔 Notifications - Sistema de notificaciones en tiempo real\n\n¿Sobre qué funcionalidad te gustaría saber más?';
+      return 'Homepage es una plataforma empresarial todo-en-uno. Puedes:\n\n📊 Dashboard - Ver estadísticas en tiempo real y análisis con IA\n🤖 Nova - Asistente conversacional que crea usuarios, envía mensajes, genera reportes y más\n📝 Nova Generator - Genera reportes, insights y descripciones automáticamente\n👥 Users - Gestionar usuarios con roles y permisos\n📬 Contact - Formulario de contacto y gestión de mensajes\n🔔 Notifications - Sistema de notificaciones en tiempo real\n\n¿Sobre qué funcionalidad te gustaría saber más?';
     }
     if (q.includes('dashboard') || q.includes('panel')) {
       return 'El Dashboard te muestra:\n- Usuarios totales y nuevos registros del día\n- Uptime del sistema\n- Proyectos activos\n- Mensajes de contacto pendientes\n- Insights generados por IA basados en tus datos\n- Tabla de actividad reciente\n\nTodo en una vista centralizada.';
@@ -139,8 +139,8 @@ Estadísticas: ${JSON.stringify(stats)}`;
     }
     return `Homepage es una plataforma empresarial todo-en-uno con las siguientes capacidades:\n\n` +
       `📊 Dashboard - Estadísticas en tiempo real, insights con IA, actividad reciente\n` +
-      `🤖 AI Agent - Crea usuarios, envía mensajes, genera reportes, estadísticas, notificaciones\n` +
-      `📝 AI Generator - Genera reportes, insights y descripciones automáticas\n` +
+      `🤖 Nova - Crea usuarios, envía mensajes, genera reportes, estadísticas, notificaciones\n` +
+      `📝 Nova Generator - Genera reportes, insights y descripciones automáticas\n` +
       `👥 User Management - CRUD completo con roles (admin/user), CSV export\n` +
       `📬 Contact - Formulario público + panel de administración con lectura\n` +
       `🔔 Notifications - Campanita con badge, panel de notificaciones, marcar leídas\n` +

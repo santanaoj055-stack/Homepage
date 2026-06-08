@@ -73,11 +73,11 @@ export default function ContactPage() {
             </a>
             <a href="/ai/agent" className="sidebar-link">
               <svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor"><circle cx="10" cy="10" r="10"/><path d="M6 10h8M10 6v8"/></svg>
-              AI Agent
+              Nova
             </a>
             <a href="/ai/generate" className="sidebar-link">
               <svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor"><path d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm0 2h12v2H4V6zm0 4h12v4H4v-4z"/></svg>
-              AI Generator
+              Nova Generator
             </a>
             <a href="/admin/users" className="sidebar-link">
               <svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor"><path d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm0 2h12v2H4V6zm0 4h12v4H4v-4z"/></svg>
