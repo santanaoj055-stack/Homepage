@@ -35,8 +35,6 @@ export class AiController {
   @UseGuards(JwtAuthGuard)
   @Get('insights')
   async insights(@Req() req) {
-    const { UsersService } = require('../users/users.service');
-    const { ContactService } = require('../contact/contact.service');
     return { text: 'Configura las estadísticas en el backend' };
   }
 }

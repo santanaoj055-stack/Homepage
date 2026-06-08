@@ -19,9 +19,13 @@ export class ExportController {
   @Get('users')
   async exportUsers(@Res() res: Response) {
     const users = await this.usersRepository.find();
+    const esc = (v: string) => {
+      const s = `"${(v ?? '').replace(/"/g, '""')}"`;
+      return /^[=+\-@\t]/.test(v) ? `"'${s}` : s;
+    };
     const csv = ['name,email,role,isActive,createdAt']
       .concat(users.map(u =>
-        `"${u.name}","${u.email}","${u.role}",${u.isActive},${u.createdAt}`
+        `${esc(u.name)},${esc(u.email)},${esc(u.role)},${u.isActive},${u.createdAt}`
       ))
       .join('\n');
 
@@ -34,9 +38,13 @@ export class ExportController {
   @Get('contacts')
   async exportContacts(@Res() res: Response) {
     const contacts = await this.contactRepository.find({ order: { createdAt: 'DESC' } });
+    const esc = (v: string) => {
+      const s = `"${(v ?? '').replace(/"/g, '""')}"`;
+      return /^[=+\-@\t]/.test(v) ? `"'${s}` : s;
+    };
     const csv = ['name,email,message,isRead,createdAt']
       .concat(contacts.map(c =>
-        `"${c.name}","${c.email}","${c.message.replace(/"/g, '""')}",${c.isRead},${c.createdAt}`
+        `${esc(c.name)},${esc(c.email)},${esc(c.message)},${c.isRead},${c.createdAt}`
       ))
       .join('\n');
 
