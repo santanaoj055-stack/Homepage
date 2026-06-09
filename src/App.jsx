@@ -7,6 +7,7 @@ import Seo from './components/Seo'
 import ThemeToggle from './components/ThemeToggle'
 import { ToastProvider } from './components/Toast'
 import { ThemeProvider } from './context/ThemeContext'
+import BookDemo from './components/BookDemo'
 import './App.css'
 
 const Dashboard = lazy(() => import('./pages/Dashboard'))
@@ -147,7 +148,7 @@ function Home() {
               </p>
               <div className="hero-buttons">
                 <Link to="/register" className="btn btn-primary btn-lg">Start free trial</Link>
-                <a href="#" className="btn btn-outline btn-lg">Book a demo</a>
+                <BookDemo />
               </div>
               <div className="hero-stats">
                 <div className="stat">

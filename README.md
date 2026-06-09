@@ -87,6 +87,7 @@ docker compose up --build
 - **Animated nav underlines** — Slide-in hover effect on desktop and mobile links
 - **Responsive design** — Mobile/tablet/desktop optimized
 - **Floating chatbot** — Nova, the AI-powered support widget (Gemini with demo fallback)
+- **Book a demo modal** — Hero CTA opens a polished modal with icon, animated inputs, gradient submit button, and form submission to `/contact`
 
 ### Auth System
 - Register with name, email, password
@@ -156,9 +157,11 @@ docker compose up --build
 
 ### Security & Production
 - Helmet security headers
-- Rate limiting (60 req/min)
+- Rate limiting — 60 req/min global, 10 req/min on auth (login/register), 5 req/min on forgot/reset password
 - CORS with whitelist origins (function-based validator)
 - ValidationPipe (whitelist + forbidNonWhitelisted)
+- DTOs with class-validator for all endpoints (including auth, notifications)
+- CSV export with formula injection protection (prefixes `= + - @` with `'`)
 - Winston logging (console + error/combined log files)
 - Code splitting (vendor, AI chunks)
 - ErrorBoundary (global React error handler)
@@ -210,7 +213,7 @@ docker compose up --build
 homepage/
 ├── src/                    # Frontend (React)
 │   ├── components/         # Reusable components
-│   │   ├── ChatBot.jsx     # Floating Nova chatbot
+│   │   ├── BookDemo.jsx     # Book a demo modal component
 │   │   ├── ErrorBoundary.jsx
 │   │   ├── LoadingScreen.jsx
 │   │   ├── NotificationBell.jsx
