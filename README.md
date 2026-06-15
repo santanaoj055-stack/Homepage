@@ -87,7 +87,7 @@ docker compose up --build
 - **Animated nav underlines** — Slide-in hover effect on desktop and mobile links
 - **Responsive design** — Mobile/tablet/desktop optimized
 - **Floating chatbot** — Nova, the AI-powered support widget (Gemini with demo fallback)
-- **Book a demo modal** — Hero CTA opens a polished modal with icon, animated inputs, gradient submit button, and form submission to `/contact`
+- **Book a demo modal** — Hero CTA opens a polished modal with icon, animated inputs, gradient submit button, and form submission to `/contact`. Scrolls page to top on open; closes automatically on scroll > 50px
 
 ### Auth System
 - Register with name, email, password
